@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CS 1300: Responsive Redesign</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="logo.ico">
+    <!-- Bootstrap CSS for quicker and consistent styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Aktiv Grotsek font from Adobe Fonts-->
+    <link rel="stylesheet" href="https://use.typekit.net/lpg0fhn.css">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="header-container d-flex flex-column px-5">
+      <h1 class="fw-medium">Responsive Redesign</h1>
+      <h6 class="fw-normal mt-2 mb-0">A redesign of the New England Club Baseball Association's website with a focus on responsiveness.</h6>
+    </div>
+    <div class="d-flex flex-column gap-4 p-5">
+      <div class="d-flex flex-column gap-4">
+        <h4 class="mb-3">Website Selection</h4>
+        <div class="d-flex justify-content-center">
+          <img class="lg-img" src="original_website.png" />
+        </div>
+        <p>I chose this website (<a href="http://www.necba.com/">http://www.necba.com/</a>) because I frequently have to use it to view Brown club baseball's schedule and standings in the league. It's always stood out to me for its poor usability and visual design.</p>
+      </div>
+      <div>
+        <h4 class="mb-3">Usability Problems</h4>
+        <p>To begin the redesign process, I wrote down some of my observations about the main usability problems the website has. I focused on the interface's learnability, memorability, and affordances to the user:</p>
+        <ul>
+          <li>
+            The site’s learnability and memorability suffers greatly from its lack of visual consistency:
+            <ul>
+              <li>Looking at the team logo images, some have backgrounds behind them while others are cut-out PNGs. This muddles the mappings between these images and any potential functions they serve: e.g. are the team logos without backgrounds buttons while the others aren’t?</li>
+              <li>The positioning of image labels varies. The labels for the commissioner headshots are aligned with the baseline and positioned on the right side while the labels for the team logos are centered along the top side.</li>
+              <li>The text for all of the main page links is capitalized in standard title case and bold font while the text for the “Application to Join” link is in all caps and not bolded.</li>
+            </ul>
+          </li>
+          <li>There is no affordance to signal to users that the blue and red email GIF is actually a link to the website’s “Contact Us Form”. Also, a low-quality animated element does not fit with a user’s mental model of what a link looks like.</li>
+          <li>The layout of the page is not conducive to scanning and violates our natural left-to-right reading path. This is because it is somewhat broken down into three main columns of elements, but these columns bleed into each other and have no visual demarcations.</li>
+          <li>Complete lack of responsiveness to changes in browser size and device type. Most of the page’s elements are absolutely positioned and don’t use any relative units for sizing and scaling. This greatly harms the usability by forcing mobile users and users with small browser widths to have to zoom in and scroll horizontally to see content.</li>
+          <li>Colors don't have strong mappings to specific functions on this site. Besides most of the links being a standard blue color, orange is used sporadically around the page for some image labels, but not others, and individual occurrences of black, red, and green are used for plain text without a clear reason as to why they aren’t all a single color.</li>
+        </ol>
+      </div>
+      <div>
+        <h4 class="mb-3">Accessibility</h4>
+        <p>The next step of the process was to investigate the site's accessibility using the <a href="https://wave.webaim.org/">WebAIM WAVE</a> tool.</p>
+        <p>Overall, I agreed with all of the WAVE tool’s findings. It found the following:</p>
+        <ul>
+          <li><b>36</b> very low-contrast errors for most of the text on the page. This low-contrast is mostly a by-product of the gray background, which renders even medium blue colors such as the ones used for “Tufts University” and “University of Massachusetts Boston” quite difficult to read.</li>
+          <li><b>22</b> very small text errors for most of the text on the page. All of the team name labels are 10px, while the majority of other text is in the 12-14px range. This makes it challenging for the average user, let alone a visually impaired user, to read the text.</li>
+          <li><b>31</b> empty alternative text errors for almost all of the images on the screen. This poses obvious issues for users with screen readers who can’t see the images well and need them to be described out loud.</li>
+      </div>
+      <div>
+        <h4 class="mb-3">Lo-fi Wireframes</h4>
+        <p>Moving on to the redesigning portion, I started by creating 3 lo-fi wireframes (mobile, tablet, and desktop) using Balsamiq to address the main usability problems.</p>
+        <div class="d-flex justify-content-center mt-4">
+          <img class="lg-img" src="balsamiq_overview.png" />
+        </div>
+      </div>
+      <div>
+        <h4 class="mb-3">Visual Design Guide</h4>
+        <p>Before starting my hi-fi prototypes in Figma, I made a UI design guide showing my redesigned site's key interactive components, colors, and typography.</p>
+        <div class="d-flex justify-content-center mt-4">
+          <img class="lg-img" src="design_guide.png" />
+        </div>
+      </div>
+      <div>
+        <h4 class="mb-3">Hi-fi Prototypes</h4>
+        <p>Using the UI design guide, I created 3 hi-fi prototypes (mobile, tablet, desktop) in Figma. I'm first showcasing all three prototypes side-by-side to illustrate the site's responsiveness before zooming in on each of them. I've also included annotations of the key components and responsive behavior.</p>
+        <div class="d-flex flex-column align-items-center justify-content-center mt-4">
+          <h4 class="mb-3">Overview</h4>
+          <img class="lg-img" src="figma_overview.png" />
+        </div>
+        <div class="d-flex flex-column align-items-center justify-content-center mt-4">
+          <h4 class="mb-3">Mobile</h4>
+          <img class="lg-img" src="figma_mobile.png" />
+        </div>
+        <div class="d-flex flex-column align-items-center justify-content-center mt-4">
+          <h4 class="mb-3">Tablet</h4>
+          <img class="lg-img" src="figma_tablet.png" />
+        </div>
+        <div class="d-flex flex-column align-items-center justify-content-center mt-4">
+          <h4 class="mb-3">Desktop</h4>
+          <img class="lg-img" src="figma_desktop.png" />
+        </div>
+      </div>
+      <div>
+        <h4 class="mb-3">Redesigned Website</h4>
+        <p>Finally, I created the actual responsively redesigned website, which can be found at this link: <a href="https://hungrypanda140.github.io/cs1300-necba-redesign/">https://hungrypanda140.github.io/cs1300-necba-redesign/</a></p>
+      </div>
+      <p><b>Citations:</b> The redesigned website's 3D baseball bat, ball, and trophy icons are from the following <a href="https://www.figma.com/community/file/1061339986660806315">Figma Community file</a>. I used <a href="https://getbootstrap.com/">Bootstrap 5</a> for this website and the redesigned website.</p>
+    </div>
+    <script src="" async defer></script>
+  </body>
+</html>

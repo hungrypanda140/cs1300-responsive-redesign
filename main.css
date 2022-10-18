@@ -1,0 +1,32 @@
+html {
+  background: #fff;
+  height: 100%;
+}
+
+body {
+  font-family: "aktiv-grotesk", "Helvetica Neue", "Helvetica", sans-serif;
+}
+
+hr {
+  height: 2px!important;
+}
+
+ul {
+  margin-top: 0.5rem!important;
+}
+
+li {
+  margin-bottom: 0.5rem!important;
+}
+
+.header-container {
+  color: white;
+  background: linear-gradient( #FFA337, #FF8A00);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 4rem;
+}
+
+.lg-img {
+  width: 60%;
+}
